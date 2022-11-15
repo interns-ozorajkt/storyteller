@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Syne:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+}
+h2, h3 {
+    font-family: 'Germania One', cursive;
+}
+h3 {    
+    font-size: 48px;
+    color: #323131;
+}
+#hero {
+    background-image: url(../img/top.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 10%;
+}
+.cta {
+    color: #fff;
+    font-size: 18px;
+    width: 50%;
+    max-width: 550px;
+}
+.cta h2 {
+    font-size: 60px;
+}
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.cta-buttons a {
+    width: 40%;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    padding: 15px 0;
+}
+.btn-explore {
+    background-image: linear-gradient(to right, #500c7a, #9f2f87);    
+    text-decoration: none;
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.btn-explore:hover {
+    background: #500c7a;
+}
+.navbar {    
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-inner {
+    display: flex;
+    justify-content:  space-between;
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.navbar .logo {
+    max-width: 115px;
+}
+.navbar .logo a,  .navbar .logo img{
+   width: 100%;
+   display: block;
+}
+.navbar, .navbar a{
+    color: #fff;
+}
+.navbar .menu {
+    display: flex;
+    align-items: center;
+}
+.navbar .menu a {
+    display: flex;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+.nav-scrolled {
+    background: #220b6ede;
+    backdrop-filter: blur(10px);
+}
+.mid {
+    position: relative;
+}
+.mid::after {
+    content: '';
+    background-image: linear-gradient(to bottom, #540d36, #641c35);
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#about {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 100px;
+    position: relative;
+    z-index: 5;
+}
+#about .logo {
+    max-width: 255px;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+#about .logo a {
+    display: block;
+    width: 100%;
+}
+.about-content {
+    /* background-color: #fff6ec; */
+    background: url(../img/dices.png) no-repeat 90% 90%, #fff6ec;
+    padding: 50px;
+    margin-top: 10px;
+}
+.about-content p {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: justify;
+}
+.about-content blockquote {
+    margin: 30px 0;
+    padding-left: 25px;
+    border-left: solid 6px #d9c1a4;
+}
+.float-img {
+    position: absolute;
+    top: 60px;
+    right: -30px;
+}
+#campaign {
+    margin: 100px auto 0;    
+    max-width: 1280px;
+    width: 90%;
+}
+#campaign h3{
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+    margin-top: -60px;
+}
+.campaign-slide {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.slide-card {
+    width: 30%;
+    border: solid 3px #500c7a;
+    background: #fff;
+    height: 536px;
+    position: relative;
+}
+
+.gradient {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0,0,0,0));
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.slide-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.campaign-logo {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+#arkemyr {
+    background-image: url(../img/castle.jpg);
+    background-position: 35% 50%;
+    background-size: cover;
+}
+#bvale {
+    background-image: url(../img/feywild.jpg);
+    background-position: 60% 50%;
+    background-size: cover;
+}
+#bvale .campaign-logo {
+    bottom: 45px;
+    padding: 10px 25px;
+}
+#leviathan {
+    background-image: url(../img/pirate.jpg);
+    background-position: 60% 50%;
+    background-size: cover;
+}
+#tavern {
+    background-image: url(../img/tavern.jpg);
+    background-position: 20% 50%;
+    background-size: cover;
+}
+.slide-card .campaign-logo img{
+    display: block;
+    width: 100%;
+}
+#leviathan .campaign-logo img{
+    max-width: 331px;
+}
+#tavern .campaign-logo img{
+    max-width: 258px;
+}
+.campaign-slide-nav {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #500c7a;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.campaign-slide-nav > * {
+    border: solid 2px #500c7a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.campaign-slide-nav > *:hover {
+    background-color: #500c7a;
+    color: #fff;
+}
+.slide-prev {
+    margin-right: -2px;
+}
+#newsletter {
+    text-align: center;
+    padding: 55px;
+    background: #efefef;
+    position: relative;
+    margin: 115px 0 50px;
+}
+#newsletter::after {
+    content: '';    
+    background: url(../img/shelves.png);
+    background-position: 50% 70%;
+    opacity: 0.07;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.newsletter-content {
+    max-width: 770px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+.newsletter-content h3 {
+    color: #500c7a;
+}
+.newsletter-content p {
+    margin: 20px 0;
+}
+.newsletter-content form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletter-content input {
+    width: 89%;
+    border: solid 2px #500c7a;
+    padding: 15px;
+}
+.newsletter-content input::placeholder {
+    color: #a996b2;
+    font-family: 'Syne', sans-serif;
+}
+
+.newsletter-content button {
+    width: 10%;
+    background-image: linear-gradient(to right, #500c7a, #9f2f87);
+    border: none;    
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+}
+.newsletter-content button:hover {
+    background: #500c7a;
+}
+
+#attribution {
+    background: #500c7a;
+    color: #fff;
+    padding: 40px 0;
+}
+
+#attribution a{
+    background: #febf46;
+    color: #000;
+    text-decoration: none;
+}
+#attribution a:hover{
+    background: #da6d14;
+    color: #fff;
+}
+@media only screen and (max-width: 600px) {
+    #hero {
+        padding: 0;
+    }
+    .cta {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    .float-img {
+        display: none;
+    }
+    #about {
+        padding-top: 50px;
+    }
+    .about-content p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .about-content h3 {
+        margin-bottom: 15px;
+    }
+    .about-content blockquote {
+        margin: 10px 0;
+    }
+    #campaign {
+        margin-top: 50px;
+    }
+    .campaign-slide {
+        margin-top: 20px;
+    }
+    #newsletter {
+        margin-top: 50px;
+    }
+    #newsletter form {
+        display: block;
+    }
+    #newsletter input {
+        width: 100%;
+    }
+    #newsletter button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+    
+.bg-sky {
+    background-image: linear-gradient(to bottom, #000032, #0c7daa);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bg-star {
+    background: url(../img/stars.png) repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+    top: 0;
+    left: 0;
+}
+.bg-cliff {
+    background: url(../img/cliff.png) repeat-x;
+    background-size: auto 293px;
+    background-position: bottom center;
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+    top: 0;
+    left: 0;
+}
+.hero-char {
+    background: url(../img/char.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    position: absolute;    
+    bottom: 0;
+    left: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.mid {
+    position: relative;
+}
+.mid::after {
+    content: '';
+    background-image: linear-gradient(to bottom, #540d36, #641c35);
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.slide-card {
+    width: 350px;
+    border: solid 3px #500c7a;
+    background: #fff;
+    height: 536px;
+    position: relative;
+}
+
+.gradient {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0,0,0,0));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-card a img{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}

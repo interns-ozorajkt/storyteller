@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>StoryTeller</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <div class="navbar">
+        <div class="navbar-inner">            
+            <div class="logo">
+                <a href="/">
+                    <img src="img/logo.png" alt="StoryTeller">
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#about">About</a>
+                <a href="#campaign">Campaign</a>
+                <a href="#attribution">Attributions</a>
+            </div>
+        </div>
+    </div>
+    <div id="hero">
+        <div class="cta">
+            <h2>Find Your<br>Legendary Journey</h2>
+            <p>Pick your favorite TTRPG campaign, roll a character and delve into terra incognita</p>
+            <div class="cta-buttons">
+                <a href="#campaign" class="btn-explore">
+                    Explore
+                </a>
+                <a href="#about">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mid">    
+        <div id="about">
+            <div class="logo">
+                <img src="img/logo.png" alt="StoryTeller">
+            </div>
+            <div class="about-content">
+                <h3>Welcome Adventurer!</h3>
+                <p>StoryTeller is a grimoire of of TTRPG campaigns. “But what’s a TTRPG ?” you might ask, well here’s a whole paragraph we took from wikipedia:</p>
+                <blockquote>
+                    <p>A <strong>tabletop role-playing game</strong> (typically abbreviated as <strong>TRPG</strong> or <strong>TTRPG</strong>), also known as a <strong>pen-and-paper role-playing game</strong>, is a form of role-playing game (RPG) in which the participants describe their characters' actions through speech. Participants determine the actions of their characters based on their characterization, and the actions succeed or fail according to a set formal system of rules and guidelines. Within the rules, players have the freedom to improvise; their choices shape the direction and outcome of the game.</p>
+                    <p>The terms pen-and-paper and tabletop are generally only used to distinguish this format of RPG from other formats, since neither pen and paper nor a table are strictly necessary.</p>
+                </blockquote>
+                <p>Dungeons & Dragons? Pathfinder? The Call of Cthulhu? We have it all! Wanna be a pirate and plunder bounties? Wizards that keep casting fireballs even though it’s a close quarter combat then died from a 1d4 damage? A rogue with traumatic childhood or a bard who keep trying to seduce the dragon? Go browse the whole compendium and start your journey!</p>
+
+                <img src="img/floating-island.png" alt="" class="float-img">
+            </div>            
+        </div>
+    </div>
+    
+    <div id="campaign">        
+        <h3>&#9876;&#65039;Campaign&#9876;&#65039;</h3>
+        <div class="swiper campaign-slide">
+            <div class="swiper-wrapper">                           
+                <div id="arkemyr" class="swiper-slide slide-card">
+                    <div class="gradient"></div>
+                    <a href="">
+                        <span class="campaign-logo">
+                            <img src="img/arkemyr-logo.png" alt="The Lost Grimoire of Arkemyr">
+                        </span>
+                    </a>
+                </div>
+                <div id="bvale" class="swiper-slide slide-card">
+                    <div class="gradient"></div>
+                    <a href="">
+                        <span class="campaign-logo">
+                            <img src="img/bvale-logo.jpg" alt="Burning Vale">
+                        </span>
+                    </a>
+                </div>
+                <div id="leviathan" class="swiper-slide slide-card">
+                    <div class="gradient"></div>
+                    <a href="">
+                        <span class="campaign-logo">
+                            <img src="img/leviathan-logo.png" alt="Burning Vale">
+                        </span>
+                    </a>
+                </div>
+                <div id="tavern" class="swiper-slide slide-card">
+                    <div class="gradient"></div>
+                    <a href="">
+                        <span class="campaign-logo">
+                            <img src="img/dead-logo.png" alt="Dead or Alive">
+                        </span>
+                    </a>
+                </div>
+            </div> 
+        </div>
+        <div class="campaign-slide-nav">
+            <div class="slide-prev">
+                <i class="ri-arrow-left-line"></i> 
+            </div>
+            <div class="slide-next">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="newsletter">
+        <div class="newsletter-content">
+            <h3>Get regular updates from us!</h3>
+            <p>Enter your email below to get awesome updates about upcoming events, new campaigns and many more!</p>
+            <form action="">
+                <input type="text" placeholder="Email Address">
+                <button>join</button>
+            </form>
+        </div>
+    </div>
+    <div id="attribution">
+        <div class="newsletter-content">
+            Attributions: assets by <a href="https://www.freepik.com/author/dgim-studio">dgim-studio</a>, <a href="https://www.freepik.com/author/upklyak">upklyak</a>,  Dragon icons created by <a href="https://www.flaticon.com/free-icons/dragon">Freepik - Flaticon</a>
+        </div>
+    </div>
+
+    <script src="js/observer.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.campaign-slide', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.slide-next',
+                prevEl: '.slide-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 45,
+                },
+            },
+        });
+    </script>
+</body>
+</html>
