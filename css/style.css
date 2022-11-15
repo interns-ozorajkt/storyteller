@@ -361,6 +361,10 @@ h3 {
     }
     .about-content blockquote {
         margin: 10px 0;
+        border-left: none;
+        border-top: solid 4px #d9c1a4;
+        background: #fff;
+        padding: 10px;
     }
     #campaign {
         margin-top: 50px;
