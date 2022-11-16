@@ -330,6 +330,25 @@ h3 {
     background: #da6d14;
     color: #fff;
 }
+#github a {
+    font-size: 48px;
+    height: 60px;
+    width: 60px;
+    background: rgb(255, 220, 62);
+    color: #323131;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+#github a:hover {
+    transform: rotate(45deg);
+}
 @media only screen and (max-width: 600px) {
     #hero {
         padding: 0;
