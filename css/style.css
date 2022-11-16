@@ -345,6 +345,7 @@ h3 {
     text-decoration: none;
     border-radius: 50px;
     transition: 0.3s;
+    z-index: 5;
 }
 #github a:hover {
     transform: rotate(45deg);
