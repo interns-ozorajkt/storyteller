@@ -160,6 +160,8 @@ h3 {
 }
 .campaign-slide {
     margin-top: 45px;
+}
+.slide-wrapper {    
     display: flex;
     justify-content: space-between;
 }
