@@ -3,12 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
-#hero {
-    width: 100%;
+#top {
     height: 100vh;
     position: relative;
 }
-    
+#hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#top .navbar {
+    position: sticky;
+    bottom: 0;
+    top: unset;
+    width: 100%;
+}
+#top .navbar-inner .logo {
+    max-width: 150px;
+    display: none;
+}
+#top .navbar-inner {
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3 ease;
+}
+#top .nav-scrolled {
+    top: 0;
+    bottom: unset;
+    position: fixed;
+}
+#top .nav-scrolled .navbar-inner .logo{
+    display: flex;
+}
+#top .nav-scrolled .navbar-inner {
+    justify-content: space-between;
+    font-size: 18px;
+}  
 .bg-sky {
     background-image: linear-gradient(to bottom, #000032, #0c7daa);
     width: 100%;
@@ -26,8 +56,8 @@
     left: 0;
 }
 .bg-cliff {
-    background: url(../img/cliff.png) repeat-x;
-    background-size: auto 293px;
+    background: url(../img/cliff.png) no-repeat;
+    background-size: cover 400px;
     background-position: bottom center;
     width: 100%;
     height: 100%;
@@ -36,13 +66,26 @@
     left: 0;
 }
 .hero-char {
-    background: url(../img/char.png) no-repeat;
+    background: url(../img/char.png) no-repeat center bottom;
     background-size: cover;
     width: 100%;
     height: 80%;
     position: absolute;    
     bottom: 0;
     left: 0;
+}
+.hero-text {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    right: 0;
+    width: 45%;
+    z-index: 5;
+}
+.hero-text .cta{
+    width: 100%;
+    margin-top: -100px;
 }
 .navbar {
     display: flex;
@@ -62,33 +105,96 @@
     position: absolute;
     top: 0;
 }
-.slide-card {
-    width: 350px;
-    border: solid 3px #500c7a;
-    background: #fff;
-    height: 536px;
-    position: relative;
+.campaign-slide {
+    overflow: visible;
 }
-
-.gradient {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0,0,0,0));
-    height: 100%;
+.card-wrapper {
+    position: relative;
+    perspective: 1000px;    
+    display: flex;
+    width: 100%;    
+    height: 536px;
+    overflow: hidden;
+}
+.slide-card {
     width: 100%;
+    border: solid 3px #500c7a;
+    background: #fff;    
+    height: 100%;    
+    position: absolute;
+    z-index: 0;
+    transition: transform 0.4s ease;
+}
+.slide-card::after {
+    content: '';
+    display: block;
+    box-shadow: 0 20px 20px 0 #000;
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.slide-card a {
-    display: block;
     width: 100%;
     height: 100%;
-    position: relative;
+    opacity: 0;
 }
-
-.slide-card a img{
-    display: block;
+.picture {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+#bvale + .picture {
+    top: 20%;
+    left: 45%;
+}
+.card-wrapper:hover {
+    overflow: visible;
+}
+.card-wrapper:hover .slide-card {
+    transform: perspective(1000px) translateY(-3%) rotateX(10deg) translateZ(0);
+    height: 95%;
+}
+.card-wrapper:hover .slide-card::after {
+    opacity: 1;
+}
+.card-wrapper:hover .picture{
+    transform: translate(-50%, -20%);
+    opacity: 1;
+}
+#bvale ~ .campaign-logo {
+    bottom: 50px;
+}
+.card-wrapper:hover .campaign-logo{
+    transform: translateY(-30%);
+}
+.gradient {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0,0,0,0));
+    height: 50%;
     width: 100%;
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
+    left: 0;
+}
+.card-wrapper .campaign-logo img{
+    display: block;
+    width: 100%;
+}
+#leviathan ~ .campaign-logo img, #bvale ~ .campaign-logo img{
+    max-width: 331px;
+}
+#tavern ~ .campaign-logo img{
+    max-width: 258px;
+}
+@media only screen and (max-width: 768px) {
+    .float-img {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .hero-text {
+        width: 90%;
+        justify-content: center;  
+    }
 }
